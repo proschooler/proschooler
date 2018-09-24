@@ -1,0 +1,156 @@
+.Input {
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  display: flex;
+  transition: 300ms;
+  color: #000000;
+}
+.Input-focused {
+  background: #ccc;
+}
+.Input-disabled {
+  background-color: #f4f7f6 !important;
+  pointer-events: none;
+}
+.Input.Input-hollow {
+  background: transparent;
+  border: 1px solid #e5e5e5;
+}
+.Input.Input-bottomBorder {
+  background: transparent;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0 !important;
+}
+.Input.Input-rightBorder {
+  border-right-style: none;
+}
+.Input.Input-bottomBorder .Input-box {
+  padding-left: 0;
+}
+.Input-bottomBorder .Input-rightChild {
+  opacity: initial;
+}
+.Input.Input-bottomBorder.Input-focused {
+  border-bottom: 1px solid #000000;
+  background: transparent;
+}
+.Input.Input-hollow.Input-focused {
+  background: transparent;
+  border: 1px solid #000000;
+}
+
+.Input.Input-hollow.Input-focused .Input-middleChild {
+  opacity: 1;
+  border: transparent;
+}
+.Input-middleChild {
+  width: auto;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.Input.Input-hollow.Input-focused .Input-leftChild,
+.Input.Input-hollow.Input-focused .Input-rightChild {
+  opacity: 1;
+}
+
+.Input-box {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  background: transparent;
+  font-family: regular;
+  overflow: auto;
+}
+.Input-box:focus {
+  border: none;
+  outline: none;
+}
+.Input-leftChild,
+.Input-rightChild {
+  width: auto;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+.Input.Input-hollow input::placeholder,
+.Input.Input-bottomBorder input::placeholder {
+  opacity: 0.5;
+}
+.Input-disabled.Input-hollow input::placeholder {
+  opacity: 0.3;
+}
+input::placeholder {
+  color: #000000;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Input.Input-hollow.Input-Invalid {
+  border: 1px solid #ff6c5f;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .Input {
+    width: 100%;
+    height: 45px !important;
+    border-radius: 3px;
+    display: flex;
+    transition: 300ms;
+    color: #000000;
+  }
+  .Input.Input-bottomBorder {
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+  }
+  .Input.Input-bottomBorder .Input-box {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .Input-middleChild {
+    width: 80px;
+  }
+  .Input-box {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0px;
+    padding-left: 10px;
+    font-size: 13px;
+    background: transparent;
+    font-family: regular;
+  }
+  .Input {
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    display: flex;
+    transition: 300ms;
+    color: #000000;
+  }
+  .Input.Input-hollow {
+    background: transparent;
+    border: 1px solid #e5e5e5;
+  }
+}
